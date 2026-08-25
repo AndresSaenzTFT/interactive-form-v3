@@ -69,8 +69,6 @@ Focustactivities();
 
 //submit button will call all our functions that validate the fields and checkboxes
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
   validateInputs(
     validateName.test(nameInput.value),
     nameInput.parentElement,
@@ -107,12 +105,6 @@ function validateActivity(e) {
 
   //seleccionamos el p con su id para facilitar el acceso
   const span = Activities.querySelector("#activities-hint");
-  /*if(TuesdayMorning.length > 1 || Tuesdayafternoon.length > 1){
-   e.preventDefault();
-    span.style.display = "inline";
-    Activities.classList.add("not-valid");
-}*/
-  console.log(TuesdayAfternoon.length);
 
   //comprobamos si tenemos un valor checked y aplicacamos diferentes clases dependiendo si se cumple o no
   if (valid.length >= 1) {
